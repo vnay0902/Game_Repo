@@ -37,14 +37,20 @@ def user_choice():
             print("Invalid input. Please enter 'rock', 'paper', or 'scissors'.")
 
 # Function to play the game
-def play_game():
-    user = user_choice()
-    computer = computer_choice()
-    print("You chose", user)
-    print("The computer chose", computer)
-    print("The winner is", winner(user, computer))
+    decide = input("Are you ready to play? (yes/no").lower()
+    if decide=="yes":
+        user = user_choice()
+        computer = computer_choice()
+        print("You chose", user)
+        print("The computer chose", computer)
+        print("The winner is", winner(user, computer))
 
-# Function to play the game again
+    elif decide=="no":
+        print("No problem")
+        break
+    else:
+        print("invalid option: Decide whether to play or not")
+#Function to play the game again
 def play_again():
     while True:
         answer = input("Do you want to play again? (yes/no): ").lower()
